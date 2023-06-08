@@ -1,0 +1,72 @@
+
+  
+  /*HEADER*/
+  header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .logo_1 {
+    height: 44px;
+  }
+  
+  .explorer button {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+    border-radius: 25px;
+    color: #FFFFFF;
+    padding: 15px 40px;
+    font-size: 16px;
+    border: none;
+    font-weight: 500;
+    margin: 20px 0 50px;
+  }
+  .explorer button:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+  
+  /*SEARCH BAR*/
+  .search {
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .search i {
+    width: 12px;
+  }
+  .search input {
+    text-align: center;
+    border: none;
+    padding: 18px 0 18px 0;
+    width: 130px;
+    background-color: #eaeaea;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .search input:focus {
+    border: none;
+    outline: none;
+  }
+  
+  /*SLOGAN*/
+  #slogan {
+    background: #f6f6f6;
+    padding: 20px 40px;
+    text-align: center;
+  }
+  #slogan h1 {
+    line-height: 28.13px;
+    padding: 15px 35px;
+  }
+  #slogan p {
+    color: #353535;
+    line-height: 21.09px;
+  }
+  

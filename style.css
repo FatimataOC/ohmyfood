@@ -1,93 +1,17 @@
-* {
-    padding: 0px;
-    list-style: none;
-    text-decoration: none;
-    color: inherit;
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    font-family: "roboto" sans-serif;
-  }
-  
-  h1 {
-    font-size: 24px;
-    font-weight: 700;
-  }
-  
-  P {
-    font-size: 18px;
-    font-weight: 300;
-  }
-  
-  /*HEADER*/
-  header {
-    width: 100%;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .logo_1 {
-    height: 44px;
-  }
-  
-  .explorer button {
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
-    border-radius: 25px;
-    color: #FFFFFF;
-    padding: 15px 40px;
-    font-size: 16px;
-    border: none;
-    font-weight: 500;
-    margin: 20px 0 50px;
-  }
-  .explorer button:hover {
-    opacity: 0.9;
-    transform: scale(1.02);
-  }
-  
-  /*SEARCH BAR*/
-  .search {
-    background-color: #eaeaea;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .search i {
-    width: 12px;
-  }
-  .search input {
-    text-align: center;
-    border: none;
-    padding: 18px 0 18px 0;
-    width: 130px;
-    background-color: #eaeaea;
-    font-weight: 500;
-    font-size: 16px;
-  }
-  .search input:focus {
-    border: none;
-    outline: none;
-  }
-  
-  /*SLOGAN*/
-  #slogan {
-    background: #f6f6f6;
-    padding: 20px 40px;
-    text-align: center;
-  }
-  #slogan h1 {
-    line-height: 28.13px;
-    padding: 15px 35px;
-  }
-  #slogan p {
-    color: #353535;
-    line-height: 21.09px;
-  }
-  
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @import"./base/reset";
+ *   |        ^^^^^^^^^^^^^^
+ *   '
+ *   style.scss 1:8  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import\"./base/reset\";\d\a   \2502         ^^^^^^^^^^^^^^\a   \2575 \a   style.scss 1:8  root stylesheet";
+}
