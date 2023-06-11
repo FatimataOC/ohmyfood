@@ -1,0 +1,13 @@
+.icon_heart {
+    margin-right: 15px;
+    margin-top: 10px;
+    &:hover {
+      animation: heart 3s infinite;
+      background: $background-color-linear-gradient;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+  }
+}
+    

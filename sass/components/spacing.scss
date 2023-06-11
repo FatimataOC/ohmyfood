@@ -1,0 +1,16 @@
+.elements_space {
+        
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    line-height: 0px;
+
+       .element_1{
+        margin-right: auto;
+        margin-left: 10px;
+    }
+
+       .element_2{
+        margin: 10px;
+       }
+}
