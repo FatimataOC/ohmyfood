@@ -52,6 +52,10 @@ p {
   font-weight: 300;
 }
 
+.fa-arrow-left {
+  margin-left: auto;
+}
+
 .picture {
   height: 400px;
   width: 100%;
@@ -167,6 +171,8 @@ header {
 
 .logo_1 {
   height: 44px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*SEARCH*/
@@ -203,7 +209,7 @@ header {
   line-height: 28.13px;
   padding: 15px 35px;
 }
-#slogan .decover {
+#slogan.decover {
   color: #353535;
   line-height: 21.09px;
 }
@@ -333,6 +339,7 @@ header {
   margin-left: 13px;
 }
 
+/*FOOTER*/
 footer {
   background-color: #353535;
   padding: 10px 15px;
