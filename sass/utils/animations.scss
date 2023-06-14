@@ -1,0 +1,52 @@
+
+//SPINNER
+@keyframes chargeur {
+    0%{
+      transform: rotate(0deg) scale(1);
+      border-top-color: $primary-color;
+      border-bottom-color: $tertiary-color;
+    }
+    25%{
+        border-top-color: $secondary-color;
+        border-bottom-color: $primary-color;
+    }
+  
+    50% {
+        transform: rotate(360deg) scale(1.15);
+        border-top-color: $primary-color;
+        border-bottom-color: $tertiary-color;
+    }
+    75%{
+      border-top-color: $secondary-color;
+      border-bottom-color: $primary-color;
+    }
+    100%{
+    transform: rotate(720deg) scale(1);
+    border-top-color: $primary-color;
+    border-bottom-color: $tertiary-color;
+  }
+  }
+  
+  // BACGROUND LOADER
+  @keyframes loader{
+  
+    0%{
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+//HEART
+  @keyframes fill{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
