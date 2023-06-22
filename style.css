@@ -24,10 +24,10 @@ a {
 }
 
 h1 {
-  font-family: Shrikhand;
   font-size: 28px;
   font-style: italic;
   font-weight: 400;
+  font-family: "shrikhand", sans-serif;
 }
 
 h2 {
@@ -38,18 +38,18 @@ h2 {
 
 h3 {
   font-size: 18px;
-  font-weight: 700;
 }
 
 h4 {
-  font-family: Shrikhand;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 700;
+  margin: 0;
 }
 
 p {
   font-size: 16px;
   font-weight: 300;
+  margin: 0;
 }
 
 @keyframes chargeur {
@@ -102,6 +102,22 @@ p {
     transform: scale(1);
   }
 }
+.delay1 {
+  animation-delay: 0.1s;
+}
+
+.delay2 {
+  animation-delay: 0.3s;
+}
+
+.delay3 {
+  animation-delay: 0.6s;
+}
+
+.delay4 {
+  animation-delay: 0.9s;
+}
+
 .picture {
   height: 400px;
   width: 120%;
@@ -119,90 +135,144 @@ p {
     margin: 0px 100px;
   }
 }
-.main_pr section {
+
+.title_heart {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  align-items: center;
+}
+.title_heart h1 {
+  margin-right: 50px;
+}
+
+.section_menus {
   display: flex;
   flex-direction: column;
   padding: 0 20px;
 }
-.main_pr .title_heart {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+.section_menus .animation_entree {
+  animation: appear;
 }
-.main_pr .title_heart h1 {
-  margin-right: 50px;
-}
-.main_pr .title_menus {
+.section_menus .title_menus {
   border-bottom: 3px solid #99E2D0;
   padding-bottom: 5px;
   width: 27px;
 }
-.main_pr .title_menus p {
-  font-size: 15px;
-}
-.main_pr .plat {
-  cursor: pointer;
-  background-color: #FFFFFF;
-  border-radius: 15px;
-  margin-left: 0px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  line-height: 0px;
-  animation: appear 5s;
+.section_menus .delay_1 {
+  animation: appear 6s;
   animation-fill-mode: both;
 }
-@media (min-width: 768px) {
-  .main_pr .plat {
-    width: 100%;
-  }
+.section_menus .delay_2 {
+  animation: appear 10s;
+  animation-fill-mode: both;
 }
-.main_pr .plat:hover {
-  transform: scale(1.02);
+.section_menus .delay_3 {
+  animation: appear 14s;
+  animation-fill-mode: both;
 }
-.main_pr .menu_item {
+.section_menus .menu_category {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 15px;
+  margin: 15px;
+}
+.section_menus .menu_category .menu_item {
   display: flex;
   overflow: hidden;
 }
-.main_pr .menu_item .description {
-  line-height: 5px;
-  padding-bottom: 20px;
-  margin-left: 10px;
-}
-.main_pr .menu_item .price {
+.section_menus .menu_category .menu_item .menu_item_price {
   margin-left: auto;
   padding: 20px;
   display: flex;
   align-items: flex-end;
 }
-.main_pr .menu_item .menu_item_check {
+.section_menus .menu_category .menu_item .menu_item_description {
+  padding: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.section_menus .menu_category .menu_item .title, .section_menus .menu_category .menu_item .subtitle {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.section_menus .menu_category .menu_item .menu_item_check {
   background-color: #99E2D0;
-  border-radius: 0 15px 15px 0;
+  margin-right: -60px;
+  width: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: -70px;
-  width: 59px;
   transform-origin: right;
   transition: all 0.7s ease-in-out;
+  border-radius: 0 15px 15px 0;
 }
-.main_pr .menu_item:hover .menu_item_check {
-  margin-right: 0px;
+.section_menus .menu_category .menu_item:hover .menu_item_check {
+  margin-right: 0;
 }
-.main_pr .menu_item .check_icon {
+.section_menus .menu_category .menu_item .check_icon {
   color: #FFFFFF;
 }
-.main_pr .menu_item:hover .check_icon {
-  opacity: 1;
-  transform: rotate(-360deg);
-}
-.main_pr .btn_commande {
+
+.btn_commande {
   display: flex;
   justify-content: center;
 }
 
+footer {
+  background-color: #353535;
+  padding: 10px 15px;
+  color: #FFFFFF;
+}
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: center;
+  }
+}
+footer .logo_mobile_tablette {
+  margin-left: 30px;
+}
+@media (min-width: 768px) {
+  footer .logo_mobile_tablette {
+    display: none;
+  }
+}
+footer ul {
+  line-height: 30px;
+  margin-left: 30px;
+}
+@media (min-width: 768px) {
+  footer ul {
+    display: flex;
+    flex-direction: row;
+  }
+}
+footer div {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+footer .logo_dekstop {
+  font-family: "shrikhand", sans-serif;
+}
+@media (max-width: 768px) {
+  footer .logo_dekstop {
+    color: transparent;
+  }
+}
+footer li {
+  margin-right: 10px;
+}
+
 .btn {
   background: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   cursor: pointer;
   border-radius: 25px;
   color: #FFFFFF;
@@ -358,7 +428,7 @@ header {
   display: flex;
   flex-grow: 1;
   align-items: center;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .action li:hover {
   transform: scale(1.02);
@@ -407,12 +477,12 @@ header {
   height: 251px;
   margin: 20px;
   background: #FFFFFF;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 15px;
 }
 @media (min-width: 768px) {
   .menus .menus_cards .card {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
   .menus .menus_cards .card:hover {
     transform: scale(1.02);
@@ -463,7 +533,6 @@ header {
 footer {
   background-color: #353535;
   padding: 10px 15px;
-  border: 2px solid black;
   color: #FFFFFF;
 }
 @media (min-width: 768px) {
@@ -475,6 +544,7 @@ footer {
   }
 }
 footer .logo_mobile_tablette {
+  font-family: "shrikhand", sans-serif;
   margin-left: 30px;
 }
 @media (min-width: 768px) {
@@ -484,8 +554,6 @@ footer .logo_mobile_tablette {
 }
 footer ul {
   line-height: 30px;
-  border: 2px solid black;
-  margin-left: 30px;
 }
 @media (min-width: 768px) {
   footer ul {
@@ -498,13 +566,18 @@ footer div {
   align-items: center;
   margin-left: 10px;
 }
+footer .logo_dekstop {
+  font-family: "shrikhand", sans-serif;
+  margin-left: 30px;
+  margin-right: 30px;
+}
 @media (max-width: 768px) {
   footer .logo_dekstop {
     color: transparent;
   }
 }
 footer li {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

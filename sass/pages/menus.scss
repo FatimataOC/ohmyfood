@@ -1,5 +1,3 @@
-
-
 .picture {
     height: 400px;
     width: 120%;
@@ -14,109 +12,152 @@
     border-radius: 30px 30px 0px 0px;
     background:$background-color;
     position: relative;
-    
+}
 
-    section {
-        display: flex;
-        flex-direction: column;
-        padding: 0 20px;
-    }
-
-    .title_heart {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-
-        h1 {
-            margin-right: 50px;
-        }
-    }
-
-    .title_menus{
-        border-bottom: 3px solid $tertiary-color;
-        padding-bottom: 5px;
-        width: 27px;
-       
-
-        p {
-            font-size: 15px;
-        }
-    }
-
-    .plat {
-            @include cursor;
-            background-color:#FFFFFF;
-            border-radius: 15px;
-            margin-left: 0px;
-            @media (min-width:768px) {
-                width: 100%; 
-            }
-           
-            @include base_shadow;
-            line-height: 0px;
-            animation: appear 5s;
-            animation-fill-mode: both;
-            
-            &:hover {
-            @include zoom_transform
-            }
-        }
-
-    .menu_item {
-        display: flex;
-        overflow: hidden;
-
-        .description {
-            line-height: 5px;
-            padding-bottom: 20px;
-            margin-left: 10px;
-        }
-
-        .price {
-            margin-left: auto;
-            padding: 20px;
-            display: flex;
-            align-items: flex-end;
-        }
-
-        .menu_item_check {
-            background-color: $tertiary-color;
-            border-radius: 0 15px 15px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: -70px;
-            width: 59px;
-            transform-origin:right;
-            transition: all 0.7s ease-in-out;
-        }
-
-        &:hover .menu_item_check {
-          
-            margin-right: 0px;
-            
-        }
-        
-        .check_icon {
-            color: #FFFFFF;
-        }
-        &:hover .check_icon{
-            opacity: 1;
-            transform: rotate(-360deg);
-        }
-
-    }
-    
-    .btn_commande {
-        display: flex;
-        justify-content: center;
+.title_heart {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    align-items: center;
+    h1 {
+        margin-right: 50px;
     }
 }
 
+.section_menus {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
 
+.animation_entree {
+ animation: appear;
+}
+   
+    .title_menus{
+        border-bottom: 3px solid $tertiary-color;
+        padding-bottom: 5px;
+        width: 27px;     
+    }
+    
+    .delay_1 {
+      animation: appear 6s;
+      animation-fill-mode: both;
+    }
 
+    .delay_2 {
+      animation: appear 10s;
+      animation-fill-mode: both;
+    }
 
+    .delay_3 {
+      animation: appear 14s;
+      animation-fill-mode: both;
+    }
+    
+    .menu_category {
+        @include base_shadow;
+        @include cursor;
+        background-color:white;
+        border-radius: 15px;
+        margin: 15px;
+      
+        .menu_item {
+            display: flex;
+            overflow: hidden;
 
+            .menu_item_price {
+                margin-left: auto;
+                padding: 20px;
+                display: flex;
+                align-items: flex-end;
+                  
+            }
+            .menu_item_description {
+                padding: 20px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .title,.subtitle {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            }
+            
+            .menu_item_check {
+                background-color: $tertiary-color;
+                margin-right: -60px;
+                width: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform-origin:right;
+                transition: all 0.7s ease-in-out;
+                border-radius: 0 15px 15px 0;
+            }
 
+           &:hover .menu_item_check {
+            margin-right: 0;
+           }
+           .check_icon {
+            color: #FFFFFF;
+        }
 
+        }
+    }
+    
+}
+
+.btn_commande {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    background-color:#353535;
+    padding: 10px 15px;
+    color: #FFFFFF;
+    @media (min-width :768px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      text-align: center;
+    }
+  
+     .logo_mobile_tablette{
+      margin-left:30px ;
+      @media (min-width :768px) {
+        display: none;
+      }
+     }
+  
+      ul {
+      line-height: 30px;
+      margin-left: 30px;
+      @media (min-width :768px) {
+        display: flex;
+        flex-direction: row;
+      }
+  
+    }
+  
+    div {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+  
+    .logo_dekstop{
+      font-family: 'shrikhand', sans-serif;
+      @media (max-width :768px) {
+        color: transparent;
+      } 
+    }
+      
+    li {
+     margin-right: 10px;
+    }
+  }
+  
+        
+  
