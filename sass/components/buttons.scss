@@ -13,5 +13,6 @@ margin: 20px 0 50px;
 &:hover {
     opacity: 0.9;
     @include zoom_transform;
+    @include transition_duration;
     }
 }

@@ -1,5 +1,4 @@
 * {
-  padding: 0px;
   list-style: none;
   text-decoration: none;
   color: inherit;
@@ -44,6 +43,7 @@ h4 {
   font-size: 18px;
   font-weight: 700;
   margin: 0;
+  font-family: "shrikhand", sans-serif;
 }
 
 p {
@@ -52,7 +52,7 @@ p {
   margin: 0;
 }
 
-@keyframes chargeur {
+@keyframes spinner {
   0% {
     transform: rotate(0deg) scale(1);
     border-top-color: #9356dC;
@@ -96,28 +96,14 @@ p {
 }
 @keyframes appear {
   0% {
-    transform: scale(0);
+    transform: translateY(50%);
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0);
+    opacity: 1;
   }
 }
-.delay1 {
-  animation-delay: 0.1s;
-}
-
-.delay2 {
-  animation-delay: 0.3s;
-}
-
-.delay3 {
-  animation-delay: 0.6s;
-}
-
-.delay4 {
-  animation-delay: 0.9s;
-}
-
 .picture {
   height: 400px;
   width: 120%;
@@ -151,55 +137,56 @@ p {
   flex-direction: column;
   padding: 0 20px;
 }
-.section_menus .animation_entree {
-  animation: appear;
-}
-.section_menus .title_menus {
+
+.title_menus {
   border-bottom: 3px solid #99E2D0;
   padding-bottom: 5px;
   width: 27px;
+  margin-left: 15px;
 }
-.section_menus .delay_1 {
-  animation: appear 6s;
-  animation-fill-mode: both;
+
+.menu_category1 .delay1 {
+  animation-delay: 2s;
 }
-.section_menus .delay_2 {
-  animation: appear 10s;
-  animation-fill-mode: both;
+.menu_category1 .delay2 {
+  animation-delay: 3s;
 }
-.section_menus .delay_3 {
-  animation: appear 14s;
-  animation-fill-mode: both;
+.menu_category1 .delay3 {
+  animation-delay: 4s;
 }
-.section_menus .menu_category {
+.menu_category1 .menu_category {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   cursor: pointer;
   background-color: white;
   border-radius: 15px;
   margin: 15px;
+  animation-name: appear;
+  animation-duration: 5s;
+  transform: scale(0);
+  animation-fill-mode: both;
 }
-.section_menus .menu_category .menu_item {
+.menu_category1 .menu_category .menu_item {
   display: flex;
   overflow: hidden;
 }
-.section_menus .menu_category .menu_item .menu_item_price {
+.menu_category1 .menu_category .menu_item .menu_item_price {
   margin-left: auto;
   padding: 20px;
   display: flex;
   align-items: flex-end;
 }
-.section_menus .menu_category .menu_item .menu_item_description {
+.menu_category1 .menu_category .menu_item .menu_item_description {
   padding: 20px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.section_menus .menu_category .menu_item .title, .section_menus .menu_category .menu_item .subtitle {
+.menu_category1 .menu_category .menu_item .title, .menu_category1 .menu_category .menu_item .subtitle {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.section_menus .menu_category .menu_item .menu_item_check {
+.menu_category1 .menu_category .menu_item .menu_item_check {
   background-color: #99E2D0;
   margin-right: -60px;
   width: 60px;
@@ -210,64 +197,16 @@ p {
   transition: all 0.7s ease-in-out;
   border-radius: 0 15px 15px 0;
 }
-.section_menus .menu_category .menu_item:hover .menu_item_check {
+.menu_category1 .menu_category .menu_item:hover .menu_item_check {
   margin-right: 0;
 }
-.section_menus .menu_category .menu_item .check_icon {
+.menu_category1 .menu_category .menu_item .check_icon {
   color: #FFFFFF;
 }
 
 .btn_commande {
   display: flex;
   justify-content: center;
-}
-
-footer {
-  background-color: #353535;
-  padding: 10px 15px;
-  color: #FFFFFF;
-}
-@media (min-width: 768px) {
-  footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    text-align: center;
-  }
-}
-footer .logo_mobile_tablette {
-  margin-left: 30px;
-}
-@media (min-width: 768px) {
-  footer .logo_mobile_tablette {
-    display: none;
-  }
-}
-footer ul {
-  line-height: 30px;
-  margin-left: 30px;
-}
-@media (min-width: 768px) {
-  footer ul {
-    display: flex;
-    flex-direction: row;
-  }
-}
-footer div {
-  display: flex;
-  align-items: center;
-  margin-left: 10px;
-}
-footer .logo_dekstop {
-  font-family: "shrikhand", sans-serif;
-}
-@media (max-width: 768px) {
-  footer .logo_dekstop {
-    color: transparent;
-  }
-}
-footer li {
-  margin-right: 10px;
 }
 
 .btn {
@@ -284,7 +223,8 @@ footer li {
 }
 .btn:hover {
   opacity: 0.9;
-  transform: scale(1.02);
+  transform: scale(1.05);
+  transition-duration: 800ms;
 }
 
 .elements_space {
@@ -322,8 +262,8 @@ footer li {
 
 /*LOADER*/
 .loader {
-  width: 100%;
   height: 100%;
+  width: 100%;
   background-color: #f6f6f6;
   position: fixed;
   opacity: 1;
@@ -343,7 +283,7 @@ footer li {
   border-top-color: #FF79DA;
   border-bottom-color: #99E2D0;
   border-radius: 50%;
-  animation: chargeur 5s linear infinite;
+  animation: spinner 5s linear infinite;
 }
 
 /*HEADER*/
@@ -429,9 +369,10 @@ header {
   flex-grow: 1;
   align-items: center;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition-duration: 800ms;
 }
 .action li:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
 .action li i {
   margin-right: 10px;
@@ -479,13 +420,14 @@ header {
   background: #FFFFFF;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 15px;
+  transition-duration: 800ms;
 }
 @media (min-width: 768px) {
   .menus .menus_cards .card {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
   .menus .menus_cards .card:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
   }
 }
 .menus .menus_cards .card .images_menus {
@@ -502,6 +444,9 @@ header {
 }
 .menus .menus_cards .card h3 {
   margin-right: auto;
+  margin-left: 13px;
+}
+.menus .menus_cards .card .city {
   margin-left: 13px;
 }
 .menus .menus_cards .card .icon {
@@ -531,8 +476,8 @@ header {
 
 /*FOOTER*/
 footer {
+  padding-left: 20px;
   background-color: #353535;
-  padding: 10px 15px;
   color: #FFFFFF;
 }
 @media (min-width: 768px) {
@@ -544,8 +489,8 @@ footer {
   }
 }
 footer .logo_mobile_tablette {
-  font-family: "shrikhand", sans-serif;
-  margin-left: 30px;
+  padding-top: 25px;
+  margin-left: 45PX;
 }
 @media (min-width: 768px) {
   footer .logo_mobile_tablette {
@@ -554,6 +499,7 @@ footer .logo_mobile_tablette {
 }
 footer ul {
   line-height: 30px;
+  margin-left: 10px;
 }
 @media (min-width: 768px) {
   footer ul {
@@ -566,18 +512,13 @@ footer div {
   align-items: center;
   margin-left: 10px;
 }
-footer .logo_dekstop {
-  font-family: "shrikhand", sans-serif;
-  margin-left: 30px;
-  margin-right: 30px;
-}
 @media (max-width: 768px) {
   footer .logo_dekstop {
     color: transparent;
   }
 }
 footer li {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

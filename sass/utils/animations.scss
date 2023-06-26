@@ -1,6 +1,6 @@
 
 //SPINNER
-@keyframes chargeur {
+@keyframes spinner {
     0%{
       transform: rotate(0deg) scale(1);
       border-top-color: $primary-color;
@@ -25,7 +25,7 @@
     border-top-color: $primary-color;
     border-bottom-color: $tertiary-color;
   }
-  }
+}
   
   // BACGROUND LOADER
   @keyframes loader{
@@ -51,30 +51,32 @@
     }
 }
 
- //APPEAR
+ //APPEAR BUTTONS MENUS
  @keyframes appear {
   0% {
-    transform: scale(0);
+    transform:translateY(50%);
+    opacity: 0;
+    
+    
   }
 
   100% {
-    transform:scale(1);
+    transform:translateY(0);
+    opacity: 1;
+  
   }
   
 }
 
-.delay1{
-  animation-delay: 0.1s;
-}
 
-.delay2{
-  animation-delay: 0.3s;
-}
 
-.delay3{
-  animation-delay: 0.6s;
-}
 
-.delay4{
-  animation-delay: 0.9s;
-}
+
+  
+
+
+
+
+
+
+

@@ -1,6 +1,6 @@
 //zoom
 @mixin zoom_transform {
-    transform: scale(1.02);
+    transform: scale(1.05);
 }
 //ombre
 @mixin base_shadow {
@@ -9,4 +9,8 @@
 
 @mixin cursor {
     cursor: pointer;
+}
+
+@mixin transition_duration {
+    transition-duration: 800ms;
 }
