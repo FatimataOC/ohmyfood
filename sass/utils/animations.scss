@@ -1,6 +1,6 @@
 
 //SPINNER
-@keyframes spinner {
+@keyframes spiner {
     0%{
       transform: rotate(0deg) scale(1);
       border-top-color: $primary-color;
@@ -41,7 +41,7 @@
   }
 
 //HEART
-  @keyframes fill{
+  @keyframes heart{
     0%{
         opacity: 0;
     }

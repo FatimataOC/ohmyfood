@@ -14,7 +14,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: loader 5s;
+  animation-name: loader;
+  animation-duration: 5s;
   animation-fill-mode: both;
 
   .spiner {
@@ -27,8 +28,7 @@
     border-top-color:$secondary-color;
     border-bottom-color:$tertiary-color;
     border-radius:50%;
-    animation:spinner 5s linear infinite;
-    
+    animation:spiner 3s linear infinite;
 
   }
 
@@ -99,23 +99,20 @@ text-align: center;
 
 /*ACTION*/
 .action {
-margin-left: 20px;
-margin-right: 20px;
+  margin-right: 25px;
+
   
   .title_action {
     margin-left: 40px;
   }
 
    ul {
-   
-   margin: 25px;
-   gap: 20px;
-   
-    @media (min-width:1024px) {
+      margin:25px;
+      gap: 20px;
+      @media (min-width:1024px) {
       display: flex;
-      
+    }
   }
-}
 
    li {
     @include cursor;
@@ -170,87 +167,102 @@ padding-bottom: 60px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
-    @media (min-width:768px){
-    margin-left: 30px;
-    margin-right: 30px;
-    grid-template-columns: repeat(2, 1fr); 
-  }
+       @media (min-width:768px){
+        margin-left: 30px;
+        margin-right: 30px;
+       grid-template-columns: repeat(2, 1fr); 
+      }
 
-  .card {
-    height:251px ;
-    margin: 20px;
-    background: #FFFFFF;
-    @include base_shadow;
-    border-radius: 15px;
-    @include transition_duration;
-    @media (min-width:768px) {
-      &:hover {
+     
+      
+
+      .card {
+      height:251px ;
+      margin: 20px;
+      background: #FFFFFF;
+      @include base_shadow;
+      border-radius: 15px;
+      @include transition_duration;
+      @include base_shadow;
+        &:hover {
         @include zoom_transform;
-       
-      }  
-    @include base_shadow
-    }
-    .images_menus {
-      display: block;
-      max-height: 180px;
-      width: 100%;
-      border-radius: 15px 15px 0 0;
-      object-fit: cover;
-    }
-    .description {
-    display: flex;
-    flex-direction: row;
-    line-height: 0px;
-    }
+        }  
 
-     h3 {
-      margin-right: auto;
-      margin-left: 13px;
-    }
-    
-    .city {
-      margin-left: 13px;
-    }
-    
-    .icon {
-      position: absolute; 
-      margin-top: 10px;
-    }
+        .images_menus {
+          display: block;
+          max-height: 180px;
+          width: 100%;
+          border-radius: 15px 15px 0 0;
+          object-fit: cover;
+        }
 
-    .badge_new {
-      display: flex;
-      justify-content: flex-end;
-    }
+        .description {
+          display: flex;
+          flex-direction: row;
+          line-height: 0px;
+        }
 
-  .new {
-    border: 2px solid $tertiary-color;
-    background: $tertiary-color;
-    width: 80px;
-    height: 29px;
-    color: #008766;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    margin-right: 10px;
-    margin-top: 10px;
-    border-radius: 2px;
-}  
+        h3 {
+          margin-right: auto;
+          margin-left: 13px;
+        }
+
+        .elements_space {
+        
+          display: flex;
+          flex-direction: row;
+          align-items: center; 
+          line-height: 0px;
+      
+             .element_1{
+              margin-right: auto;
+              margin-left: 10px;
+          }
+      
+             .element_2{
+              margin: 10px;
+             }
+      }
+
+        .city {
+          margin-left: 13px;
+        }
+
+        .icon {
+          position: absolute; 
+          margin-top: 10px;
+        }
     
-       span {
-        margin-left: 13px;
+        .badge_new {
+          display: flex;
+          justify-content: flex-end;
+        }
+
+        .new {
+          border: 2px solid $tertiary-color;
+          background: $tertiary-color;
+          width: 80px;
+          height: 29px;
+          color: #008766;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          margin-right: 10px;
+          margin-top: 10px;
+          border-radius: 2px;
+        }  
       }
     }
   }
-}
+
 
 /*FOOTER*/
 footer {
-  padding-left: 20px;
   background-color:#353535;
     color: #FFFFFF;
     @media (min-width :768px) {
       display: flex;
-     flex-direction: row;
+      flex-direction: row;
       justify-content: flex-end;
       text-align: center;
     }
@@ -270,7 +282,6 @@ footer {
         display: flex;
         flex-direction: row;
       }
-  
     }
   
     div {
@@ -280,7 +291,8 @@ footer {
     }
   
     .logo_dekstop{
-      
+      margin-right: 30px;
+      margin-left: 30px;
       @media (max-width :768px) {
         color: transparent;
       } 
@@ -289,8 +301,22 @@ footer {
     li {
      margin-right: 10px;
     }
-  }
+
+}
 
 
       
    
+
+    
+    
+
+     
+    
+    
+    
+   
+
+    
+
+
