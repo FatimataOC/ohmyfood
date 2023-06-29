@@ -3,6 +3,7 @@
   text-decoration: none;
   color: inherit;
   box-sizing: border-box;
+  padding: 0;
 }
 
 body {
@@ -106,7 +107,7 @@ p {
 }
 .picture {
   height: 400px;
-  width: 120%;
+  width: 100%;
   object-fit: cover;
   margin-bottom: -50px;
 }
@@ -280,7 +281,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
 }
 
 .logo_1 {
@@ -336,7 +336,8 @@ header {
   margin-left: 40px;
 }
 .action ul {
-  margin: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   gap: 20px;
 }
 @media (min-width: 1024px) {
@@ -348,7 +349,7 @@ header {
   cursor: pointer;
   height: 72px;
   background-color: #f6f6f6;
-  padding: 20px 20px;
+  padding: 18px 18px;
   border-radius: 20px;
   margin: 15px 0px;
   display: flex;
@@ -377,6 +378,7 @@ header {
   border-radius: 50%;
   position: relative;
   right: 30px;
+  z-index: 1;
 }
 
 /*MENUS*/
@@ -386,14 +388,14 @@ header {
   padding-bottom: 60px;
 }
 .menus .title_restaurant {
-  margin-left: 50px;
+  margin-left: 40px;
 }
 .menus .menus_cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .menus .menus_cards {
     margin-left: 30px;
     margin-right: 30px;
@@ -470,6 +472,8 @@ header {
 footer {
   background-color: #353535;
   color: #FFFFFF;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 @media (min-width: 768px) {
   footer {
@@ -492,10 +496,11 @@ footer ul {
   line-height: 30px;
   margin-left: 10px;
 }
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   footer ul {
     display: flex;
     flex-direction: row;
+    white-space: nowrap;
   }
 }
 footer div {
